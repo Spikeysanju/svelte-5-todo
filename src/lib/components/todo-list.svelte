@@ -3,16 +3,16 @@
 	import type { Task } from '$lib';
 
 	let value = $state(''); // Input value
-	let tasks = $state<Task[]>([]);
-	let tags = $state.frozen(['Work', 'Personal', 'Important']); // Immutable list of tags
+	let tasks = $state<Task[]>([]); // List of tasks
+	let tags = $state.frozen(['Work', 'Personal', 'Important']); // Immutable list of tags, more like a constant value
 
 	// Taking snapshots of the state for undo/redo functionality
 	let taskSnapshot: Task[][] = [];
 
-	let totalTasks = $derived.by(() => tasks.length);
+	let totalTasks = $derived.by(() => tasks.length); 
 	let completedTasks = $derived.by(() => tasks.filter((task) => task.completed).length);
 
-	// Filtering tasks using $derived.by
+	// Filtering tasks using $derived.by 
 	let filteredTasks = $derived.by(() => {
 		return tasks.filter((task) => !task.completed);
 	});
