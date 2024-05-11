@@ -4,7 +4,7 @@
 
 	let value = $state(''); // Input value
 	let tasks = $state<Task[]>([]); // List of tasks
-	let tags = $state.frozen(['Work', 'Personal', 'Important']); // Immutable list of tags, more like a constant value
+	let tags = $state.frozen(['Work', 'Personal', 'Important']); // Use frozen to prevent reactivity
 
 	// Taking snapshots of the state for undo/redo functionality
 	let taskSnapshot: Task[][] = [];
