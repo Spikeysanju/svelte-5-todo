@@ -21,11 +21,11 @@ A SvelteKit application that implements a simple todo list with advanced feature
 
 The `todo-list.svelte` file uses several features of Svelte 5:
 
-- `$state`: This feature is used to create reactive states for tasks, input value, and tags. Any changes to these states will automatically cause the component to re-render.
-- `frozen`: This feature is used to prevent reactivity for tags. Changes to tags will not cause the component to re-render.
-- `$derived.by`: This feature is used to create derived states for total tasks, completed tasks, and filtered tasks. These states automatically update whenever their dependencies change.
-- `$effect`: This feature is used to handle side effects, such as saving and loading tasks from local storage.
-- `$inspect`: This feature is used for debugging. It can log the current state of tasks to the console.
+- `$state`: This api is used to create reactive states for tasks, input value, and tags. Any changes to these states will automatically cause the component to re-render.
+- `frozen`: This api is used to prevent reactivity for tags. Changes to tags will not cause the component to re-render.
+- `$derived.by`: This api is used to create derived states for total tasks, completed tasks, and filtered tasks. These states automatically update whenever their dependencies change.
+- `$effect`: This api is used to handle side effects, such as saving and loading tasks from local storage.
+- `$inspect`: This api is used for debugging. It can log the current state of tasks to the console.
 
 Note: These new Runes APIs are part of Svelte 5.
 
